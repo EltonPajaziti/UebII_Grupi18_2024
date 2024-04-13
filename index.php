@@ -45,7 +45,7 @@
       <?php include 'statistikat1.php'; ?>
       <?php include 'statistikat2.php'; ?>
       <?php include 'keshillat.php'; ?>
-      
+      <?php include 'getintouch.php'; ?>
 
 
 
