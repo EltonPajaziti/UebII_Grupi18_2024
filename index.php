@@ -45,28 +45,11 @@
       <?php include 'statistikat1.php'; ?>
       <?php include 'statistikat2.php'; ?>
       <?php include 'keshillat.php'; ?>
-      <?php include 'getintouch.php'; ?>
       <?php include 'price.php'; ?>
       <?php include 'testimonials.php'; ?>
+      <?php include 'getintouch.php'; ?>
       <?php include 'footer.php'; ?>
 
-      <!-- end section -->
-    
-      
-   
-      <!-- end section -->
-	  
-	  <!-- doctor -->
-	  
-
-
-	  
-	  <!-- end doctor section -->
-	  
-      
-      <!-- end section -->
-
-    
       <div class="copyright-area wow fadeIn">
          <div class="container">
             <div class="row">
