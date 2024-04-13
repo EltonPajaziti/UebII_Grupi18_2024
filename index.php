@@ -15,25 +15,25 @@
    <link rel="shortcut icon" href="../images/fevicon.ico.png" type="image/x-icon" />
    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- Site CSS -->
    <link rel="stylesheet" href="style.css">
    <!-- Colors CSS -->
-   <link rel="stylesheet" href="../css/colors.css">
+   <link rel="stylesheet" href="css/colors.css">
    <!-- ALL VERSION CSS -->
-   <link rel="stylesheet" href="../css/versions.css">
+   <link rel="stylesheet" href="css/versions.css">
    <!-- Responsive CSS -->
-   <link rel="stylesheet" href="../css/responsive.css">
+   <link rel="stylesheet" href="css/responsive.css">
    <!-- Custom CSS -->
-   <link rel="stylesheet" href="../css/custom.css">
+   <link rel="stylesheet" href="css/custom.css">
    <!-- Modernizer for Portfolio -->
-   <script src="../js/modernizer.js"></script>
+   <script src="js/modernizer.js"></script>
    <!-- [if lt IE 9] -->
    </head>
    <body class="clinic_version">
       <!-- LOADER -->
       <div id="preloader">
-         <img class="preloader" src="../images/loaders/heart-loading2.gif" alt="">
+         <img class="preloader" src="images/loaders/heart-loading2.gif" alt="">
       </div>
       <!-- END LOADER -->
       <?php include 'header.php'; ?>
