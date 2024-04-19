@@ -18,8 +18,10 @@
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <!-- Site CSS -->
    <link rel="stylesheet" href="style.css">
+
    <!-- Colors CSS -->
    <link rel="stylesheet" href="css/colors.css">
+ 
    <!-- ALL VERSION CSS -->
    <link rel="stylesheet" href="css/versions.css">
    <!-- Responsive CSS -->
@@ -81,5 +83,7 @@
       <script src="js/custom.js"></script>
       <!-- map -->
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+
+  
    </body>
 </html>

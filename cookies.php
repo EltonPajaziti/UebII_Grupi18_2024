@@ -82,9 +82,20 @@ if (isset($_POST['consent'])) {
     background-color: #45a049; 
 }
 -->
-
-
-</html>
+<?php
+//me bo ni button per me marr submit qfar lloj 
+if(isset($_POST['fontSize'])) {
+    $fontSize = '20px';
+    setcookie('fontSize', $fontSize, time() + (86400 * 30), "/"); // Cookie valid for 30 days
+}
+?>                 <?php
+$defaultFontSize = '16px'; // Default font size
+if(isset($_COOKIE['fontSize'])) {
+    $fontSize = $_COOKIE['fontSize'] . 'px'; // Append 'px' to the font size value
+} else {
+    $fontSize = $defaultFontSize;
+}
+?>
 
 
 
