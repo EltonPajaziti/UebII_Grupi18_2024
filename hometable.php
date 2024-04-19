@@ -5,7 +5,7 @@
                   <div class="service-time one" style="background:#2895f1;">
                      <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
                      <h3>Emergency Case</h3>
-                     <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>
+                     <p>In case of emergencies, our clinic provides immediate care and support. Our experienced medical team is available round the clock to handle urgent medical situations.</p>
                   </div>
                </div>
             </div>
@@ -40,7 +40,7 @@
                   <div class="service-time three" style="background:#0060b1;">
                      <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
                      <h3>Clinic Timetable</h3>
-                     <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et quas mole.</p>
+                     <p>Our clinic timetable outlines our operating hours and appointment availability. We strive to accommodate your schedule by offering flexible appointment slots throughout the week.</p>
                   </div>
                </div>
             </div>

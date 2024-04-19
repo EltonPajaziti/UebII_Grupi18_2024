@@ -10,7 +10,7 @@
                   <div class="message-box">
                      <h4>What We Do</h4>
                      <h2>Clinic Service</h2>
-                     <p class="lead">Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                     <p class="lead">Offering a comprehensive range of medical services, from preventive care to specialized treatments, all tailored to meet your unique health needs. Our services include general check-ups,</p>
                      <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p>
                      <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
                   </div>

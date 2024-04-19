@@ -4,7 +4,7 @@
                <div class="col-md-4">
                   <div class="logo padding">
                      <a href=""><img src="images/logo.png" alt=""></a>
-                     <p>Locavore pork belly scen ester pine est chill wave microdosing pop uple itarian cliche artisan.</p>
+                     <p>Trusted Care, for a Healthier Tomorrow.</p>
                   </div>
                </div>
                <div class="col-md-4">
