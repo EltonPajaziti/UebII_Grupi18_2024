@@ -1,3 +1,34 @@
+<?php
+class Termini {
+protected $emri;
+protected $email;
+protected $data;
+protected $ora;
+protected $doktori;
+protected $mesazhi;
+public function __construct($emri, $email, $data, $ora, $doktori, $mesazhi) {
+$this->emri = $emri;
+$this->email = $email;
+$this->data = $data;
+$this->ora = $ora;
+$this->doktori = $doktori;
+$this->mesazhi = $mesazhi;
+
+}
+public function getEmri() { return $this->emri; }
+public function setEmri($emri) { $this->emri = $emri; }
+public function getEmail() { return $this->email; }
+public function setEmail($email) { $this->email = $email; }
+public function getData() { return $this->data; }
+public function setData($data) { $this->data = $data; }
+public function getOra() { return $this->ora; }
+public function setOra($ora) { $this->ora = $ora; }
+public function getDoktori() { return $this->doktori; }
+public function setDoktori($doktori) { $this->doktori = $doktori; }
+public function getMesazhi() { return $this->mesazhi; }
+public function setMesazhi($mesazhi) { $this->mesazhi = $mesazhi; }
+}
+?>
 
 <div id="service" class="services wow fadeIn">
          <div class="container">
@@ -156,4 +187,6 @@ if (isset($_POST['submit'])) {
         }
     }
 }
+
+
 ?>
