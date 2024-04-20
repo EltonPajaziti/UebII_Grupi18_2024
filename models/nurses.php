@@ -47,6 +47,4 @@ class Nurse extends User {
         $this->nurse_department = $department;
     }
 }
-
-
 ?>

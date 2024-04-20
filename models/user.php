@@ -16,8 +16,6 @@ abstract class User
         $this->email = $email;
         $this->password = $password;
     }
-
-    // Getters and setters for common properties
     public function getId()
     {
         return $this->id;
@@ -26,7 +24,6 @@ abstract class User
     public function setId($id)
     {
         $this->id = $id;
-        return $this;
     }
 
     public function getName()
@@ -37,7 +34,6 @@ abstract class User
     public function setName($name)
     {
         $this->name = $name;
-        return $this;
     }
 
     public function getUsername()
@@ -48,7 +44,7 @@ abstract class User
     public function setUsername($username)
     {
         $this->username = $username;
-        return $this;
+        
     }
 
     public function getEmail()
@@ -59,7 +55,6 @@ abstract class User
     public function setEmail($email)
     {
         $this->email = $email;
-        return $this;
     }
 
     public function getPassword()
@@ -73,4 +68,4 @@ abstract class User
      
     }
 }
-
+?>

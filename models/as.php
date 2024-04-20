@@ -5,8 +5,6 @@ error_reporting(E_ALL);
 
 include("user.php");
 
-
-
 class AdministrativeStaff extends User {
     private $staff_department;
 
@@ -49,8 +47,6 @@ class AdministrativeStaff extends User {
     parent::setPassword($password);
   }
 
-
-    // Getter and setter for department
     public function getDepartment() {
         return $this->staff_department;
     }

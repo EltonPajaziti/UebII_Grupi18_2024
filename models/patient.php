@@ -21,8 +21,7 @@ class Patient extends User {
   public function getPatient_name()
   {
     return parent::getName();
-    git config --global user.email "you@example.com"
-    git config --global user.name "Your Name"
+   
   }
   public function getPatient_username()
   {
@@ -41,14 +40,10 @@ class Patient extends User {
   {
     return parent::getPassword();
   }
-
   public function setPatient_password($password)
   {
     parent::setPassword($password);
   }
-
-
-
     public function getMedicalHistory() {
         return $this->medicalHistory;
     }

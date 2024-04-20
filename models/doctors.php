@@ -47,7 +47,6 @@ class Doctor extends User{
   {
     parent::setPassword($password);
   }
-    // getters dhe setters per specialization
     public function getSpecialization()
     {
         return $this->dr_specialization;

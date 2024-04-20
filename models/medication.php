@@ -12,7 +12,6 @@ class Medication {
         $this->price = $price;
     }
 
-    // getters and setters: medication properties
     public function getName() {
         return $this->name;
     }

@@ -1,4 +1,5 @@
 <?php
+
 class Invoice {
     private $patient;
     private $services;
@@ -83,7 +84,6 @@ class BillingManager {
         $this->payments[] = $payment;
         return $payment;
     }
-
 }
 
 ?>
