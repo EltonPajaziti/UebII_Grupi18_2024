@@ -21,8 +21,6 @@
 <?php
 
        if(isset($_SESSION['activity_log'])){
-
-         echo " <h2> User activity Log </h2> ";
          echo "<ul>";
 
       foreach($_SESSION['activity_log'] as $activity){
@@ -36,7 +34,6 @@
         echo"</ul>";
 
 }
-
 
 ?>
 
