@@ -91,6 +91,4 @@
 </html>
 
 
-<?php
-include ("cookies.php");
-?>
+
