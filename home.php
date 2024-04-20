@@ -1,3 +1,46 @@
+<?php
+  session_start();
+
+  function log_activity($action){
+
+    if(!isset($_SESSION['activity_log'])){
+
+        $_SESSION['activity_log']=array();
+    }
+    $_SESSION['activity_log'][]=array('timestamp'=>date('Y-m-d H:i:s'),'action'=>$action);
+
+
+
+  }
+
+  log_activity('Visited homepage');
+
+
+?>
+
+<?php
+
+       if(isset($_SESSION['activity_log'])){
+
+         echo " <h2> User activity Log </h2> ";
+         echo "<ul>";
+
+      foreach($_SESSION['activity_log'] as $activity){
+
+         echo "<li> {$activity['timestamp']}- {$activity['action']}</li>";
+    
+
+
+  }
+
+        echo"</ul>";
+
+}
+
+
+?>
+
+
 <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('images/slider-bg.png');">
     <div class="container">
         <div class="row">
@@ -21,6 +64,8 @@
                             echo "<span class='wrap'>$message</span><br>"; // Shtoni një <br> pas çdo mesazhi për të ndarë rreshtat
                         }
                         ?>
+
+                        
                     </h2>
                 </div>
             </div>
