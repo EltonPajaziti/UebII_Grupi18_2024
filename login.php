@@ -139,4 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Username or Password is invalid";
     }
 }
+
+    include ("cookies.php");
 ?>
+
