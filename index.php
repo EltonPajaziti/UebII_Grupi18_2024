@@ -20,15 +20,7 @@
 
 
 
-<?php
 
-if (isset($_SESSION['activity_log'])) {
-    $last_activity = end($_SESSION['activity_log']);
-    echo "<ul>";
-    echo "<li>{$last_activity['timestamp']} - {$last_activity['action']}</li>";
-    echo "</ul>";
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -116,7 +108,15 @@ if (isset($_SESSION['activity_log'])) {
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
 
      
-     
+     <?php
+
+if (isset($_SESSION['activity_log'])) {
+    $last_activity = end($_SESSION['activity_log']);
+    echo "<ul>";
+    echo "<li>{$last_activity['timestamp']} - {$last_activity['action']}</li>";
+    echo "</ul>";
+}
+?>
 
   
    </body>
