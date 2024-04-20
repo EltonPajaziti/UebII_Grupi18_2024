@@ -8,42 +8,42 @@
                         <div class="serv">
                            <span class="icon-service"><img src="images/service-icon1.png" alt="#" /></span>
                            <h4>PREMIUM FACILITIES</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                           <p> Experience the epitome of comfort and care with our premium facilities, where every detail is tailored to ensure your utmost satisfaction and well-being.</p>
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="serv">
                            <span class="icon-service"><img src="images/service-icon2.png" alt="#" /></span>
                            <h4>LARGE LABORATORY</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                           <p> Explore innovation in healthcare with our expansive laboratory, equipped with state-of-the-art technology.</p>
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="serv">
                            <span class="icon-service"><img src="images/service-icon3.png" alt="#" /></span>
                            <h4>DETAILED SPECIALIST</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                           <p>Uncover personalized care like never before with our team of meticulous specialists, each committed to providing comprehensive evaluations.</p>
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="serv">
                            <span class="icon-service"><img src="images/service-icon4.png" alt="#" /></span>
                            <h4>CHILDREN CARE CENTER</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                           <p>Delight in peace of mind knowing your little ones are in nurturing hands at our children's care center</p>
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="serv">
                            <span class="icon-service"><img src="images/service-icon5.png" alt="#" /></span>
                            <h4>FINE INFRASTRUCTURE</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                           <p>Immerse yourself in an ambiance of sophistication and tranquility with our fine infrastructure.</p>
                         </div>
                      </div>
                      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div class="serv">
                            <span class="icon-service"><img src="images/service-icon6.png" alt="#" /></span>
                            <h4>ANYTIME BLOOD BANK</h4>
-                           <p>Lorem Ipsum is simply dummy text of the printing.</p>
+                           <p>Rest assured knowing life-saving resources are always within reach with our anytime blood bank.</p>
                         </div>
                      </div>
                   </div>
