@@ -21,7 +21,7 @@
 
 
 <?php
-// Display the last logged activity if the session variable is set
+
 if (isset($_SESSION['activity_log'])) {
     $last_activity = end($_SESSION['activity_log']);
     echo "<ul>";

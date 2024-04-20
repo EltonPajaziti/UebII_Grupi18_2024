@@ -98,10 +98,12 @@
             <br>
         
             <input type="email" name="email" id="email" placeholder="Email"
+            value="<?= htmlspecialchars($_POST["email"] ??"") ?> ">
             value="<?= htmlspecialchars($_POST["email"] ??"") ?> " required>
             <br>
             <label for="password"><b>Password<b></label>
             <br>
+            <input type="password" name="password" id="password" placeholder="Password">
             <input type="password" name="password" id="password" placeholder="Password" required>
             <br>
             <button id="login"><b>Log in<b></button>
@@ -139,6 +141,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Username or Password is invalid";
     }
 }
+
+include ("cookies.php");
 
 
 ?>
