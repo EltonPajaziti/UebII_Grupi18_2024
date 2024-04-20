@@ -39,8 +39,12 @@
    <li><a data-scroll href="#price">Price</a></li>
    <li><a data-scroll href="#testimonials">Testimonials</a></li>
    <li><a data-scroll href="#getintouch">Contact</a></li>
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+   <li><a href="signup.php" class="btn btn-secondary">Sign Up</a></li> 
+<li><a href="login.php" class="btn btn-primary">Log In</a></li>
+   
+       <!-- Button trigger modal -->
+<li<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Launch demo modal
 </button>
 
@@ -61,13 +65,12 @@
       </div>
     </div>
   </div>
-</div>
-
+</div></li>
 </ul>
 
                   </div>
                </nav>
-               <div class="serch-bar">
+               <!-- <div class="serch-bar">
                   <div id="custom-search-input">
                      <div class="input-group col-md-12">
                         <input type="text" class="form-control input-lg" placeholder="Search" />
@@ -78,6 +81,32 @@
                         </span>
                      </div>
                   </div>
-               </div>
+               </div> -->
+               <!-- <div class="login-signup">
+  <div class="buttons">
+    <a href="login.php" class="btn btn-primary">Log In</a>
+    <a href="signup.php" class="btn btn-secondary">Sign Up</a>
+  </div>
+</div> -->
+  <style>
+   .login-signup .buttons {
+  display: flex;
+  gap: 10px; /* Or the space you want between the buttons */
+}
+
+/* Nëse ekziston një rregull për butonat që ndikon në shfaqjen e tyre, mund të duhet të shtoni stile shtesë këtu. */
+.nav-item .nav-link {
+    padding: 10px 15px; /* Adjust padding as needed */
+    display: block;
+    color: inherit; /* Inherit the text color from the parent */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.nav-item .nav-link:hover, .nav-item .nav-link:focus {
+    background-color: #00b359; /* The green color on hover */
+    color: white; /* Change text color on hover if needed */
+}
+
+  </style>
             </div>
          </div>
