@@ -21,12 +21,11 @@ if (isset($_COOKIE['emri'])) {
     echo "<tr><td>Mesazhi:</td><td>" . htmlspecialchars($_COOKIE['mesazhi']) . "</td></tr>";
     echo "</table>";
 }
-?>
-
-
-
-
 
 echo "<a href='logout.php'>Log out</a>";
-
 ?>
+
+
+
+
+
