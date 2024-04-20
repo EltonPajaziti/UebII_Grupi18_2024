@@ -38,7 +38,6 @@ public function ruaj() {
     }
 }
 class TerminiDetajuar extends Termini {
-    // Additional methods if needed
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $termini = new TerminiDetajuar(
