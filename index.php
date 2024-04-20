@@ -1,3 +1,34 @@
+<?php
+  session_start();
+
+  function log_activity($action){
+
+    if(!isset($_SESSION['activity_log'])){
+
+        $_SESSION['activity_log']=array();
+    }
+    $_SESSION['activity_log'][]=array('timestamp'=>date('Y-m-d H:i:s'),'action'=>$action);
+
+
+
+  }
+
+  log_activity('Visited homepage');
+
+
+?>
+
+
+
+<?php
+// Display the last logged activity if the session variable is set
+if (isset($_SESSION['activity_log'])) {
+    $last_activity = end($_SESSION['activity_log']);
+    echo "<ul>";
+    echo "<li>{$last_activity['timestamp']} - {$last_activity['action']}</li>";
+    echo "</ul>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -84,6 +115,7 @@
       <!-- map -->
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
 
+     
      
 
   
