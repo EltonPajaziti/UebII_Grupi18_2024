@@ -37,6 +37,22 @@ public function ruaj() {
     setcookie('mesazhi', $this->mesazhi, time() + 86400, "/");
     }
 }
+class TerminiDetajuar extends Termini {
+    // Additional methods if needed
+    }
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $termini = new TerminiDetajuar(
+    $_POST['name'],
+    $_POST['email'],
+    $_POST['date'],
+    $_POST['appointmentTime'],
+    $_POST['doctorName'],
+    $_POST['message']
+    );
+    $termini->ruaj();
+    header('Location: index.php');
+    exit;
+    }
 ?>
 
 <div id="service" class="services wow fadeIn">
