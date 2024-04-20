@@ -32,7 +32,7 @@
                   //Perdorimi i variables dhe casja e saj
                   $about = "About us"; ?>
 <ul class="nav navbar-nav">
-   <li><a class="active" href="index.html">Home</a></li>
+   <li><a class="active" href="index.php">Home</a></li>
    <li><a data-scroll href="#about"><?php echo $about; ?></a></li>
    <li><a data-scroll href="#service">Services</a></li>
    <li><a data-scroll href="#doctors">Doctors</a></li>
