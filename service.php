@@ -27,6 +27,15 @@ public function getDoktori() { return $this->doktori; }
 public function setDoktori($doktori) { $this->doktori = $doktori; }
 public function getMesazhi() { return $this->mesazhi; }
 public function setMesazhi($mesazhi) { $this->mesazhi = $mesazhi; }
+
+public function ruaj() {
+    setcookie('emri', $this->emri, time() + 86400, "/");
+    setcookie('email', $this->email, time() + 86400, "/");
+    setcookie('data', $this->data, time() + 86400, "/");
+    setcookie('ora', $this->ora, time() + 86400, "/");
+    setcookie('doktori', $this->doktori, time() + 86400, "/");
+    setcookie('mesazhi', $this->mesazhi, time() + 86400, "/");
+    }
 }
 ?>
 
