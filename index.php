@@ -71,7 +71,7 @@
       <?php include 'statistikat1.php'; ?>
       <?php include 'statistikat2.php'; ?>
       <?php include 'keshillat.php'; ?>
-      <?php include 'price.php'; ?>
+     
       <?php include 'testimonials.php'; ?>
       <?php include 'getintouch.php'; ?>
       <?php include 'footer.php'; ?>
@@ -143,6 +143,6 @@ if (isset($_SESSION['activity_log'])) {
 
 
 
-     
+
    </body>
 </html>
