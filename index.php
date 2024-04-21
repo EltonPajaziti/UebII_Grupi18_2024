@@ -15,11 +15,7 @@
 
   log_activity('Visited homepage');
 
-
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -106,9 +102,29 @@
       <script src="js/custom.js"></script>
       <!-- map -->
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
+     
+     
+     
+     <?php 
+     
+     if (!isset($_SESSION['visit_count'])) {
+   
+   $_SESSION['visit_count'] = 1;
+} else {
+
+   $_SESSION['visit_count']++;
+}
+
+// Display the visit count
+echo "Number of visits: " . $_SESSION['visit_count'];
+
+?>
 
      
      <?php
+
+
+
 
 if (isset($_SESSION['activity_log'])) {
     $last_activity = end($_SESSION['activity_log']);
@@ -117,6 +133,9 @@ if (isset($_SESSION['activity_log'])) {
     echo "</ul>";
 }
 ?>
+
+
+
 
   
    </body>

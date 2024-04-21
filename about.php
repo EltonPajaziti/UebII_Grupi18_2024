@@ -11,7 +11,7 @@
                      <h4>What We Do</h4>
                      <h2>Clinic Service</h2>
                      <p class="lead">Offering a comprehensive range of medical services, from preventive care to specialized treatments, all tailored to meet your unique health needs. Our services include general check-ups,</p>
-                     <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </p>
+                     <p> We provide personalized care delivered by a team of dedicated specialists committed to ensuring your health and well-being. Whether it’s routine examinations or complex surgeries, our state-of-the-art facilities and compassionate approach ensure you receive the best possible care. </p>
                      <a href="#services" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Learn More</a>
                   </div>
                   <!-- end messagebox -->
