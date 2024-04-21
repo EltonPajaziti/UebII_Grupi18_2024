@@ -1,4 +1,3 @@
-
 <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('images/slider-bg.png');">
     <div class="container">
         <div class="row">
@@ -22,8 +21,6 @@
                             echo "<span class='wrap'>$message</span><br>"; // Shtoni një <br> pas çdo mesazhi për të ndarë rreshtat
                         }
                         ?>
-
-                        
                     </h2>
                 </div>
             </div>

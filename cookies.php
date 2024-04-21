@@ -93,8 +93,6 @@ if ($cookieConsent === null || $cookieConsent === 'declined') {
 </body>
 </html>
 <?php
-
-
 //me bo ni button per me marr submit qfar lloj 
 if(isset($_POST['fontSize'])) {
     $fontSize = '20px';

@@ -1,22 +1,3 @@
-<?php
-  session_start();
-
-  function log_activity($action){
-
-    if(!isset($_SESSION['activity_log'])){
-
-        $_SESSION['activity_log']=array();
-    }
-    $_SESSION['activity_log'][]=array('timestamp'=>date('Y-m-d H:i:s'),'action'=>$action);
-
-
-
-  }
-
-  log_activity('Visited homepage');
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
    <!-- Basic -->
@@ -106,44 +87,7 @@
       <script src="js/custom.js"></script>
       <!-- map -->
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNUPWkb4Cjd7Wxo-T4uoUldFjoiUA1fJc&callback=myMap"></script>
-     
-     
-     
-     <?php 
-     
-     if (!isset($_SESSION['visit_count'])) {
-   
-   $_SESSION['visit_count'] = 1;
-} else {
-
-   $_SESSION['visit_count']++;
-}
-
-// Display the visit count
-echo "Number of visits: " . $_SESSION['visit_count'];
-
-?>
-
-     
-     <?php
-
-
-
-
-if (isset($_SESSION['activity_log'])) {
-    $last_activity = end($_SESSION['activity_log']);
-    echo "<ul>";
-    echo "<li>{$last_activity['timestamp']} - {$last_activity['action']}</li>";
-    echo "</ul>";
-}
-?>
-
-
-
 
   
    </body>
 </html>
-
-
-

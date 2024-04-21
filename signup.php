@@ -113,9 +113,6 @@
         }
     </style>
     <body>
-
-
-
         <div class="background"></div>
         <div>
             <img src = "images/logo.png">
@@ -173,9 +170,5 @@
     
         </form>
 
-
-
-        
-    
     </body>
 </head>

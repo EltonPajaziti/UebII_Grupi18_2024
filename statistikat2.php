@@ -1,6 +1,6 @@
 <?php
 // Deklarimi i vargut numerik për vizitorët javorë
-$weeklyVisitors = [120, 2000, 150, 300];
+$weeklyVisitors = [120, 200, 150, 300];
 
 // Sortimi i vizitorëve në mënyrë rritëse të vlerave
 // sort($weeklyVisitors);
@@ -28,6 +28,9 @@ function calculateTotalVisitors($visitors) {
 }
 
 $totalVisitorsThisWeek = calculateTotalVisitors($weeklyVisitors);
+
+
+
 
 ?>
 

@@ -1,4 +1,4 @@
-    <div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
+<div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
          <div class="container">
             <div class="heading">
                <span class="icon-logo"><img src="images/icon-logo.png" alt="#"></span>
@@ -42,11 +42,4 @@
             </div>
             <div id="googleMap" style="width:100%;height:450px;"></div>
          </div>
-
-         <script>
-        // JavaScript code to refresh the page after form submission
-        document.getElementById('ajax-contact').addEventListener('submit', function() {
-            window.location.reload();
-        });
-    </script>
       </div>

@@ -102,7 +102,7 @@
             <br>
             <label for="password"><b>Password<b></label>
             <br>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <input type="password" name="password" id="password" placeholder="Password">
             <br>
             <button id="login"><b>Log in<b></button>
             <br>
@@ -139,11 +139,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Username or Password is invalid";
     }
 }
-
-include ("cookies.php");
-
-
 ?>
-
-
-
