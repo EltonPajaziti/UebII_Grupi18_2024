@@ -1,3 +1,4 @@
 # Projekti Ueb II - Faza 1
 
-test test
+Janë plotësuar të gjitha kërkesat e projektit!
+
