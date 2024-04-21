@@ -2,7 +2,7 @@
 // Deklarimi i vargut asociativ për statistika me përshkrimet përkatëse
 $clinicStatistics = [
     'Treated Patients' => 3200, 
-    'Successful Operations' => 1200,
+    'successful Operations' => 1200,
     'Staff Members' => 25
 ];
 
@@ -22,17 +22,22 @@ $clinicStatistics = [
             <h2>Our Clinic in Numbers</h2>
         </div>
         <div class="row">
-            <?php foreach ($clinicStatistics as $description => $number): ?>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="statistic-box wow fadeInUp">
-                        <div class="statistic-value">
-                            <img src="images/icon-<?php echo strtolower(str_replace(' ', '-', $description)); ?>.png" alt="" class="img-responsive">
-                            <h2><?php echo number_format($number); ?></h2>
-                            <p><?php echo $description; ?></p>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach; ?>
+        
+        <?php foreach ($clinicStatistics as $description => $number): ?>
+       
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="statistic-box wow fadeInUp">
+            <div class="statistic-value">
+                <img src="images/icon-<?php 
+                // Perdorimi i String Funksioneve
+                echo strtolower(str_replace(' ', '-', $description)); ?>.png" alt="" class="img-responsive">
+                <h2><?php echo number_format($number); ?></h2>
+                <p><?php echo strtoupper($description); ?></p>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
         </div>
     </div>
 </div>

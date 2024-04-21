@@ -44,6 +44,11 @@ class Termini {
 class TerminiDetajuar extends Termini {
     // Additional methods if needed
 }
+function calculateDaysUntilAppointment($appointmentDate) {
+    $now = new DateTime(); // Current date and time
+    $appointment = new DateTime($appointmentDate);
+    return $now->diff($appointment)->days;
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $termini = new TerminiDetajuar(
@@ -54,6 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_POST['doctorName'],
         $_POST['message']
     );
+
+    $daysUntilAppointment = calculateDaysUntilAppointment($_POST['date']);
+    $patientName = $_POST['name']; // Merrni emrin e pacientit nga forma
+    setcookie('daysUntilAppointment', $daysUntilAppointment, time() + 86400, "/");
+    setcookie('patientName', $patientName, time() + 86400, "/"); // Ruaj emrin e pacientit në cookie
 
     $termini->ruaj();
 
