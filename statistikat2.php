@@ -3,7 +3,7 @@
 $weeklyVisitors = [120, 200, 150, 300];
 
 // Sortimi i vizitorëve në mënyrë rritëse të vlerave
-// sort($weeklyVisitors);
+sort($weeklyVisitors);
 // Për të sortuar në mënyrë zbritëse, zëvendësoni sort() me rsort() në kodin e mëposhtëm
 // rsort($weeklyVisitors);
 

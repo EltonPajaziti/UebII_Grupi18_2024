@@ -1,7 +1,7 @@
 
 <div class="header-top wow fadeIn">
             <div class="container">
-               <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+               <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="image"></a>
                <div class="right-header">
                   <div class="header-info">
                      <div class="info-inner">
@@ -33,7 +33,7 @@
                   $about = "About us";
                   $doctors="Doctors"; ?>
 <ul class="nav navbar-nav">
-   <li><a class="active" href="index.html">Home</a></li>
+   <li><a class="active" href="index.php">Home</a></li>
    <li><a data-scroll href="#about"><?php echo $about; ?></a></li>
    <li><a data-scroll href="#service">Services</a></li>
    <li><a data-scroll href="#doctors"><?php echo $doctors; ?></a></li>

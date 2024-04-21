@@ -10,11 +10,11 @@
                         $messages = ["Welcome to Life Care", "we Care Your Health", "we are Expert!"];
 
                            // Var_dump para shfaqjes së mesazheve
-                           // echo "<pre>";
-                           // var_dump($messages);
-                           // echo "</pre>";
+                        //    echo "<pre>";
+                        //    var_dump($messages);
+                        //    echo "</pre>";
                            /*
-                           Var dump perdoret per debuggim dhe nuk është zakonisht i përshtatshëm për shfaqje në një faqe në prodhim. Ju duhet të përdorni var_dump() gjatë zhvillimit për të kuptuar dhe kontrolluar strukturën e të dhënave. Hiqeni këtë pjesë kur faqja juaj është gati për tu publikuar për përdoruesit. */
+                           Var dump perdoret per debuggim dhe nuk është zakonisht i përshtatshëm për shfaqje në një faqe në prodhim. Ju duhet të përdorni var_dump() gjatë zhvillimit për të kuptuar dhe kontrolluar strukturën e të dhënave. */
                         
                         // Shfaqni çdo mesazh
                         //Perdorimi i string funksionit ucfirst()

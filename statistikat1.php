@@ -2,14 +2,14 @@
 // Deklarimi i vargut asociativ për statistika me përshkrimet përkatëse
 $clinicStatistics = [
     'Treated Patients' => 3200, 
-    'successful Operations' => 1200,
+    'Successful Operations' => 1200,
     'Staff Members' => 25
 ];
 
 // asort($clinicStatistics);// ne baze te vlerave
 // ksort($clinicStatistics);// ne baze te celesit ne menyre rritese
 // arsort($clinicStatistics);// Sorton vargun asociativ në bazë të vlerave në mënyrë zbritëse, duke ruajtur çelësat e asociuar me vlerat e tyre.
-// krsort($clinicStatistics);//Sorton vargun asociativ në bazë të çelësave në mënyrë zbritëse.
+krsort($clinicStatistics);//Sorton vargun asociativ në bazë të çelësave në mënyrë zbritëse.
 
 
 ?>
