@@ -29,13 +29,14 @@
 				  
                   <div id="navbar" class="navbar-collapse collapse">
                   <?php 
-                  //Perdorimi i variables dhe casja e saj
-                  $about = "About us"; ?>
+                  //Perdorimi i variablave dhe casja e tyre
+                  $about = "About us";
+                  $doctors="Doctors"; ?>
 <ul class="nav navbar-nav">
    <li><a class="active" href="index.html">Home</a></li>
    <li><a data-scroll href="#about"><?php echo $about; ?></a></li>
    <li><a data-scroll href="#service">Services</a></li>
-   <li><a data-scroll href="#doctors">Doctors</a></li>
+   <li><a data-scroll href="#doctors"><?php echo $doctors; ?></a></li>
    <li><a data-scroll href="#price">Price</a></li>
    <li><a data-scroll href="#testimonials">Testimonials</a></li>
    <li><a data-scroll href="#getintouch">Contact</a></li>

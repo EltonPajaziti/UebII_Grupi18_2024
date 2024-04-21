@@ -7,10 +7,23 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit;
 }
 
+<<<<<<< Updated upstream
 echo "<h1>Welcome " . $_SESSION['username'] . "!</h1>";
 echo "<p>This is the welcome page.</p>";
 
 
+=======
+// // Pjesa shtesë për të kontrolluar dhe shfaqur të dhënat e terminit
+// if (isset($_SESSION['termini'])) {
+//     $termini = $_SESSION['termini'];
+//     // Krijimi i tabelës për të dhënat e terminit
+//     echo "<table>";
+//     foreach ($termini as $key => $value) {
+//         echo "<tr><td>" . htmlspecialchars($key) . "</td><td>" . htmlspecialchars($value) . "</td></tr>";
+//     }
+//     echo "</table>";
+// }
+>>>>>>> Stashed changes
 
 // Kontrolloni nëse cookies ekzistojnë dhe nëse po, printojini ato.
 if (isset($_COOKIE['emri'])) {
@@ -24,11 +37,30 @@ if (isset($_COOKIE['emri'])) {
     echo "<tr><td>Mesazhi:</td><td>" . htmlspecialchars($_COOKIE['mesazhi']) . "</td></tr>";
     echo "</table>";
 }
+<<<<<<< Updated upstream
 
 echo "<a href='logout.php'>Log out</a>";
 ?>
 
 
 
+=======
+?>
+
+
+<!-- if (isset($_COOKIE['termini'])) {
+    $termini = $_COOKIE['termini'];
+    // Krijimi i tabelës për të dhënat e terminit
+    echo "<table>";
+    foreach ($termini as $key => $value) {
+        echo "<tr><td>" . htmlspecialchars($key) . "</td><td>" . htmlspecialchars($value) . "</td></tr>";
+    }
+    echo "</table>";
+} -->
+
+
+
+<a href='logout.php'>Log out</a>;
+>>>>>>> Stashed changes
 
 

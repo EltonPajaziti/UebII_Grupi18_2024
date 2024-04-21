@@ -61,7 +61,11 @@
       <?php include 'home.php'; ?>
       <?php include 'hometable.php'; ?>
       <?php include 'about.php'; ?>
-      <?php include 'service.php'; ?>
+      <?php
+
+    include 'service.php';
+
+?>
       <?php include 'doctors.php'; ?>
       <?php include 'statistikat1.php'; ?>
       <?php include 'statistikat2.php'; ?>

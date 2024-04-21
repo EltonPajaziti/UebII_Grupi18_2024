@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
 class Termini {
 protected $emri;
 protected $email;
@@ -53,6 +54,72 @@ class TerminiDetajuar extends Termini {
     exit;
     }
 ?>
+=======
+
+class Termini {
+    protected $emri;
+    protected $email;
+    protected $data;
+    protected $ora;
+    protected $doktori;
+    protected $mesazhi;
+
+    public function __construct($emri, $email, $data, $ora, $doktori, $mesazhi) {
+        $this->emri = $emri;
+        $this->email = $email;
+        $this->data = $data;
+        $this->ora = $ora;
+        $this->doktori = $doktori;
+        $this->mesazhi = $mesazhi;
+    }
+
+    // Getter and setter methods
+    public function getEmri() { return $this->emri; }
+    public function setEmri($emri) { $this->emri = $emri; }
+    public function getEmail() { return $this->email; }
+    public function setEmail($email) { $this->email = $email; }
+    public function getData() { return $this->data; }
+    public function setData($data) { $this->data = $data; }
+    public function getOra() { return $this->ora; }
+    public function setOra($ora) { $this->ora = $ora; }
+    public function getDoktori() { return $this->doktori; }
+    public function setDoktori($doktori) { $this->doktori = $doktori; }
+    public function getMesazhi() { return $this->mesazhi; }
+    public function setMesazhi($mesazhi) { $this->mesazhi = $mesazhi; }
+
+    public function ruaj() {
+        setcookie('emri', $this->emri, time() + 86400, "/");
+        setcookie('email', $this->email, time() + 86400, "/");
+        setcookie('data', $this->data, time() + 86400, "/");
+        setcookie('ora', $this->ora, time() + 86400, "/");
+        setcookie('doktori', $this->doktori, time() + 86400, "/");
+        setcookie('mesazhi', $this->mesazhi, time() + 86400, "/");
+    }
+}
+
+class TerminiDetajuar extends Termini {
+    // Additional methods if needed
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $termini = new TerminiDetajuar(
+        $_POST['name'],
+        $_POST['email'],
+        $_POST['date'],
+        $_POST['appointmentTime'],
+        $_POST['doctorName'],
+        $_POST['message']
+    );
+
+    $termini->ruaj();
+
+    header('Location: index.php');
+    exit;
+}
+
+?>
+
+>>>>>>> Stashed changes
 
 <div id="service" class="services wow fadeIn">
          <div class="container">
@@ -107,7 +174,7 @@ class TerminiDetajuar extends Termini {
                   <div class="appointment-form">
                      <h3><span>+</span> Book Appointment</h3>
                      <div class="form">
-                     <form action="index.php" method="post">
+                     <form action="service.php" method="post">
     <fieldset>
         <!-- Emri -->
         <div class="form-group">
@@ -120,7 +187,7 @@ class TerminiDetajuar extends Termini {
         </div>
 
         <!-- Dita -->
-        <div class="form-group">
+        <!-- <div class="form-group">
             <select class="form-control" name="day" required>
                 <option value="">Day</option>
                 <option value="Monday">Monday</option>
@@ -129,7 +196,13 @@ class TerminiDetajuar extends Termini {
                 <option value="Thursday">Thursday</option>
                 <option value="Friday">Friday</option>
             </select>
-        </div>
+        </div> -->
+
+          <!-- Dita (zëvendësuar me input të tipit date) -->
+          <div class="form-group">
+                    <label for="date">Day</label>
+                    <input type="date" id="date" name="date" class="form-control" required />
+                </div>
 
         <!-- Koha -->
         <div class="form-group">
@@ -168,6 +241,7 @@ class TerminiDetajuar extends Termini {
 
 
 
+
       <?php
 if (isset($_POST['submit'])) {
     $errors = [];
@@ -180,8 +254,8 @@ if (isset($_POST['submit'])) {
         $errors[] = "The email format is invalid.";
     }
 
-    if (empty($_POST['day'])) {
-        $errors[] = "The day is required.";
+    if (empty($_POST['date'])) {
+        $errors[] = "The date is required.";
     }
 
     if (empty($_POST['appointmentTime'])) {
