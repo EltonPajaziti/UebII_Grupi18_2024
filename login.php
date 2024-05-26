@@ -93,7 +93,7 @@
         <br>
         <h1><b>Log In<b></h1>
         
-        <form method="POST">
+        <form method="POST" action="database.php" >
             <label for="email"><b>Email<b></label>
             <br>
         
@@ -104,7 +104,7 @@
             <br>
             <input type="password" name="password" id="password" placeholder="Password">
             <br>
-            <button id="login"><b>Log in<b></button>
+            <button id="login" type="submit" name="login"><b>Log in<b></button>
             <br>
             <h4><b>If you don't have an account yet, you can </b><a class="signup" href="signup.php"><b>Sign up</b></a></h4>
 

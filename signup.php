@@ -125,50 +125,47 @@
         
         
     
-        <form action="signup_process.php" method="post"  id="signup" novalidate> <!--when the form is submitted this is where the data will be send-->
-            <!--post method to save data in the server-->
-           
-            <div>
-
-                <label for="name" ><b>Name</b> </label>
-                <br>
-                <input type="text" placeholder="Enter name" id="name" name="name" required>
-            </div>
-            <div>
-
-                <label for="last_name" ><b>Last Name</b> </label>
-                <br>
-                <input type="text" placeholder="Enter last name" id="last_name" name="last_name" required>
-            </div>
-            <div class="form-group">
+        <form action="database.php" method="post" id="signup" novalidate>
+    <div class="form-group hidden">
+        <input type="hidden" name="action" id="action" class="form-control mb-3" value="register" />
+    </div>
+    <div>
+        <label for="name"><b>Name</b></label>
+        <br>
+        <input type="text" placeholder="Enter name" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="last_name"><b>Last Name</b></label>
+        <br>
+        <input type="text" placeholder="Enter last name" id="last_name" name="lastname" required>
+    </div>
+    <div class="form-group">
         <label for="position"><b>Position:</b></label>
         <select id="position" name="position" required>
-          <option value="Doctor">Doctor</option>
-          <option value="Nurse">Nurse</option>
-        
+            <option value="Doctor">Doctor</option>
+            <option value="Nurse">Nurse</option>
         </select>
-      </div>
-            <div>
-                <label for="email"><b>Email</b></label>
-                <br>
-                <input type="email" placeholder="Enter email" id="email" name="email" required>
-            </div>
-            <div>
-            <label for="password"><b>Password</b></label>
-            <br>
-            <input type="password" placeholder="Enter password" id="password" name="password" required>
-            </div>
+    </div>
+    <div>
+        <label for="email"><b>Email</b></label>
+        <br>
+        <input type="email" placeholder="Enter email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="password"><b>Password</b></label>
+        <br>
+        <input type="password" placeholder="Enter password" id="password" name="password" required>
+    </div>
+    <div>
+        <label for="password_confirmation"><b>Confirm the password</b></label>
+        <br>
+        <input type="password" placeholder="Re - enter the password" id="password_confirmation" name="password_confirmation">
+    </div>
+    <h4><b>If you  have an account</b><a class="login" href="login.php"> <b>Login</b></a></h4>
+    <button class="signup" type="submit" name="register"><b>Sign up</b></button>
+    <button class="cancel" type="button"><b>Cancel</b></button>
+</form>
 
-            <div>
-                <label for="password_confirmation"><b>Confirm the password</b></label>
-                <br>
-                <input type="password" placeholder="Re - enter the password" id="password_confirmation" name="password_confirmation" required>
-            </div>
-
-            <button class="signup"><b>Sign up</b></button>
-            <button class="cancel"><b>Cancel</b></button>
-    
-        </form>
 
     </body>
 </head>

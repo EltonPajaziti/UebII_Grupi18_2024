@@ -165,13 +165,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <!-- Emri i Mjekut -->
         <div class="form-group">
-            <select class="form-control" name="doctorName" required>
-                <option value="">Doctor Name</option>
-                <option value="Soren Bo Bostian">Soren Bo Bostian</option>
-                <option value="Bryan Saftler">Bryan Saftler</option>
-                <option value="Matthew Bayliss">Matthew Bayliss</option>
-            </select>
-        </div>
+        <select class="form-control" name="doctorName" id="doctorSelect" required>
+            <option value="">Doctor Name</option>
+            <!-- emrat e userave qe e kan position doktor, duke i marr me api prej databazes  -->
+        </select>
+    </div>
 
         <!-- Mesazhi -->
         <div class="form-group">
@@ -192,7 +190,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
          </div>
       </div>
 
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Document loaded');
+            fetch('http://localhost/editedueb2/api.php?action=get_user_doctors')
+                .then(response => {
+                    console.log('Fetch response received');
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data parsed from JSON:', data);
+                    const select = document.getElementById('doctorSelect');
+                    data.user_doctors.forEach(doctor => {
+                        const option = document.createElement('option');
+                        option.value = `${doctor.name} ${doctor.lastname}`;
+                        option.textContent = `${doctor.name} ${doctor.lastname}`;
+                        select.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Error fetching doctors:', error));
+        });
+    </script>
 
 
       <?php
