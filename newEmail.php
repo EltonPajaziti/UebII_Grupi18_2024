@@ -1,29 +1,29 @@
 <?php
-include 'db.php';
-session_start();
-if (!isset($_SESSION['user_id'])) {
-    // Redirect to login page if user is not logged in
-    header("Location: login.php");
-    exit();
-}
+// include 'db.php';
+// session_start();
+// if (!isset($_SESSION['user_id'])) {
+//     // Redirect to login page if user is not logged in
+//     header("Location: login.php");
+//     exit();
+// }
 
-$user_id = $_SESSION['user_id'];
+// $user_id = $_SESSION['user_id'];
 
-// Fetch current email from the database
-try {
+// // Fetch current email from the database
+// try {
 
 
-    $stmt = $pdo->prepare("SELECT email FROM Users WHERE id = :user_id");
-    $stmt->bindParam(':user_id', $user_id);
-    $stmt->execute();
+//     $stmt = $pdo->prepare("SELECT email FROM Users WHERE id = :user_id");
+//     $stmt->bindParam(':user_id', $user_id);
+//     $stmt->execute();
 
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);
-    $current_email = $user['email'];
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
-}
+//     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+//     $current_email = $user['email'];
+// } catch (PDOException $e) {
+//     die("Connection failed: " . $e->getMessage());
+// }
 ?>
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,4 +69,4 @@ try {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> -->

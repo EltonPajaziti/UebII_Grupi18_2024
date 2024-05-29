@@ -6,11 +6,30 @@ $clinicStatistics = [
     'Staff Members' => 25
 ];
 
-// asort($clinicStatistics);// ne baze te vlerave
-// ksort($clinicStatistics);// ne baze te celesit ne menyre rritese
-// arsort($clinicStatistics);// Sorton vargun asociativ në bazë të vlerave në mënyrë zbritëse, duke ruajtur çelësat e asociuar me vlerat e tyre.
-krsort($clinicStatistics);//Sorton vargun asociativ në bazë të çelësave në mënyrë zbritëse.
+// Funksioni që përcjell vlerën përmes referencës dhe shton 5 në numrin e Staff Members
+function increaseStaffMembers(&$statistics) {
+    $statistics['Staff Members'] += 5;
+}
 
+// Thirrja e funksionit për të rritur numrin e Staff Members
+increaseStaffMembers($clinicStatistics);
+
+// Kthimi i një reference për vlerën e Staff Members
+function &getStaffMembersReference(&$statistics) {
+    return $statistics['Staff Members'];
+}
+
+// Marrja e referencës për Staff Members
+$staffMembers = &getStaffMembersReference($clinicStatistics);
+
+// Ndryshimi i referencës së Staff Members
+$staffMembers = 30;
+
+// Largimi i referencës për Staff Members duke përdorur unset()
+unset($staffMembers);
+
+// Rendisja e vargut në bazë të çelësave në mënyrë zbritëse
+krsort($clinicStatistics);
 
 ?>
 
