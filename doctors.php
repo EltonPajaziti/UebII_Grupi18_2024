@@ -1,6 +1,8 @@
 <?php
 // Deklarimi i vargut të doktorëve
 //Perdorimi i vargut multidimensional
+require('WebsiteErrors/errorHandler.php');
+echo $xx;
 $doctors = [
     [
         "name" => "Soren Bo Bostian",

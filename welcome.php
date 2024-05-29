@@ -1,67 +1,56 @@
+<?php
+session_start();
+
+include 'db.php';
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login.php");
+    exit;
+}
+
+// Bashko emrin dhe mbiemrin për të marrë emrin e plotë të doktorit
+$doctor_fullname = $_SESSION['user_name'] . " " . $_SESSION['user_lastname'];
+
+$query = "SELECT * FROM appointments WHERE doctor_name = ?";
+$stmt = $pdo->prepare($query);
+$stmt->execute([$doctor_fullname]);
+$appointments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-         body {
-            background-image: url("price-bg.png"); /* Sigurohuni që kjo është rruga e saktë */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-    </style>
+    <title>Welcome Doctor</title>
 </head>
 <body>
-    <?php
-    session_start(); // Starto sesionin
-
-    // Kontrollo nëse përdoruesi është kyçur, nëse jo, ridrejto në faqen e kyçjes
-    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-        header("Location: index.php");
-        exit;
-    }
-
-
-
-// case-sensitive constant name
-define("GREETING", "Welcome to the page dedicated only to Medical Staff!");
-echo "<h1 style='color: green; font-size: 30px;'>" . GREETING . "</h1>";
-
-
-    if (isset($_COOKIE['emri'])) {
-        echo "<h2>Appointment Details</h2>";
-        echo "<table>";
-        echo "<tr><td>Name:</td><td>" . htmlspecialchars($_COOKIE['emri']) . "</td></tr>";
-        echo "<tr><td>Email:</td><td>" . htmlspecialchars($_COOKIE['email']) . "</td></tr>";
-        echo "<tr><td>Date:</td><td>" . htmlspecialchars($_COOKIE['data']) . "</td></tr>";
-        echo "<tr><td>Time:</td><td>" . htmlspecialchars($_COOKIE['ora']) . "</td></tr>";
-        echo "<tr><td>Doctor:</td><td>" . htmlspecialchars($_COOKIE['doktori']) . "</td></tr>";
-        echo "<tr><td>Message:</td><td>" . htmlspecialchars($_COOKIE['mesazhi']) . "</td></tr>";
-        echo "</table>";
-    }
-
-    if (isset($_COOKIE['daysUntilAppointment']) && isset($_COOKIE['patientName'])) {
-        $daysLeft = $_COOKIE['daysUntilAppointment'];
-        $patientName = $_COOKIE['patientName'];
-        $dayWord = $daysLeft == 1 ? 'day' : 'days'; // Kontrolloni nëse duhet të përdorni njësinë në singular apo plural
-        echo "<div class='appointment-info' style='color: green;'><strong>There are {$daysLeft} {$dayWord} left until {$patientName}'s appointment.</strong></div>";
-    }
-
-    $weeklyVisitors = [120, 200, 150, 300]; // Vendos këtu vizitorët e javës
-    $GLOBALS['totalVisitorsGlobal'] = array_sum($weeklyVisitors);
-    makeDecisionBasedOnVisitors();
-
-    function makeDecisionBasedOnVisitors() {
-        if ($GLOBALS['totalVisitorsGlobal'] > 1000) {
-            echo "<p>We had more than 1000 visitors this week!</p>";
-        } else {
-            echo "<p>Visitor numbers are less than 1000 this week.</p>";
-        }
-    }
-    ?>
-
-    <a  style="text-decoration: none;" href='logout.php'>Log out</a>
+    <h1>Welcome, <?= htmlspecialchars($doctor_fullname) ?></h1>
+    <h2>Your Appointments:</h2>
+    <?php if ($appointments): ?>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Patient Name</th>
+                <th>Patient Email</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Message</th> <!-- Shtoje këtë header -->
+            </tr>
+            <?php foreach ($appointments as $appointment): ?>
+                <tr>
+                    <td><?= htmlspecialchars($appointment['id']) ?></td>
+                    <td><?= htmlspecialchars($appointment['patient_name']) ?></td>
+                    <td><?= htmlspecialchars($appointment['patient_email']) ?></td>
+                    <td><?= htmlspecialchars($appointment['appointment_date']) ?></td>
+                    <td><?= htmlspecialchars($appointment['appointment_time']) ?></td>
+                    <td><?= htmlspecialchars($appointment['message']) ?></td> <!-- Shfaq mesazhin -->
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    <?php else: ?>
+        <p>No appointments found.</p>
+    <?php endif; ?>
+    <a href='logout.php'>Log Out</a>
 </body>
 </html>
