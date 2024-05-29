@@ -62,6 +62,7 @@
       <?php include 'home.php'; ?>
       <?php include 'hometable.php'; ?>
       <?php include 'about.php'; ?>
+      <?php include 'weather.php'; ?>
       <?php
 
     include 'service.php';

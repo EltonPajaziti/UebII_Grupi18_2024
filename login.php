@@ -113,30 +113,4 @@
 </head>
 
 
-<?php
-// Kredencialet statike të përdoruesit
-$static_username = "grupi18@student.uni-pr.edu";
-$static_password = "Ueb2"; // Zëvendëso me një fjalëkalim të sigurtë të statik
 
-session_start(); // Starto sesionin
-
-// Kontrollo nëse forma është dërguar
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['email'];
-    $password = $_POST['password'];
-
-    // Kontrollo për kredencialet
-    if ($username == $static_username && $password == $static_password) {
-        // Kredencialet janë të saktë, regjistro përdoruesin në sesion
-        $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
-
-        // Drejto përdoruesin në faqen e mirëseardhjes
-        header("Location: welcome.php");
-        exit;
-    } else {
-        // Kredencialet janë të pasakta, shfaq një mesazh gabimi
-        $error = "Username or Password is invalid";
-    }
-}
-?>
